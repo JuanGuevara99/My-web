@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+
+:root {
+    --color-bg: #fdfdfd;
+    --color-texto: #333;
+    --color-principal: #F44600;
+    --color-blanco: #fdfdfd;
+    --color-sombra: #0000;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-texto);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--color-blanco);
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.navbar a.activo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: .2rem;
+    background: var(--color-blanco);
+}
+
+#modoOscuro-icono {
+    font-size: 2.4rem;
+    color: var(--color-blanco);
+    cursor: pointer;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-inicio {
+    max-width: 44rem;
+}
+
+.contenido-inicio h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: .3;
+}
+
+.contenido-inicio h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+.contenido-inicio p {
+    font-size: 1.6rem;
+}
+
+.contenido-inicio .redesSociales-logo a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--color-principal);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--color-sombra);
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.contenido-inicio .redesSociales-logo a:hover {
+    background: var(--color-principal);
+    color: var(--color-blanco)
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--color-principal);
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .5rem var(--color-sombra);
+    font-size: 1.6rem;
+    color: var(--color-blanco);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    border: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.inicio .contenido-profesion {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.inicio .contenido-profesion .profesion-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 768px;
+    height: 768px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio .profesion-logo .profesion {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-principal);
+    transform: rotate(calc(360deg / 3 * var(--i)));
+    transform-origin: 384px;
+    background: var(--color-bg);
+    padding: 13px 0;
+}
+
+.inicio .profesion-logo .profesion:nth-child(2) i {
+    margin-right: 15px;
+}
+
+.inicio .profesion-logo .profesion:nth-child(4),
+.inicio .profesion-logo .profesion:nth-child(6) {
+    padding-bottom: 20px;
+}
+
+.inicio .profesion i {
+    font-size: 3.8rem;
+}
+
+.inicio .profesion h3 {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.inicio .profesion-logo .circulo {
+    width: 560px;
+    height: 560px;
+    border: 3px solid var(--color-principal);
+    border-radius: 50%;
+}
+
+.inicio .contenido-profesion .cubrir {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid var(--color-principal);
+    border-right: 384px solid var(--color-principal);
+    border-bottom: 384px solid var(--color-principal);
+    border-left: 384px solid transparent;
+}
+
+.imagen-inicio img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 53%;
+    pointer-events: none;
+}
+
+span {
+    color: var(--color-principal);
+}
+
+.sobreMi {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
