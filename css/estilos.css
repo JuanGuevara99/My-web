@@ -30,6 +30,8 @@ body {
     color: var(--color-texto);
 }
 
+
+/* ------------ Sección del navegador ---------------- */
 .header {
     position: fixed;
     top: 0;
@@ -40,6 +42,13 @@ body {
     display: flex;
     align-items: center;
     z-index: 100;
+    transition: .5s;
+
+}
+
+.header.barra {
+    background: var(--color-bg);
+    box-shadow: 0 1.rem 1rem var(--color-sombra);
 }
 
 .logo {
@@ -58,6 +67,14 @@ body {
     margin-right: 3.5rem;
 }
 
+.header.barra .navbar a {
+    color: var(--color-texto)
+}
+
+.header.barra .navbar a.activo {
+    color: var(--color-principal);
+}
+
 .navbar a.activo::before {
     content: '';
     position: absolute;
@@ -68,16 +85,29 @@ body {
     background: var(--color-blanco);
 }
 
+.header.barra .navbar a::before {
+    background: var(--color-principal);
+    opacity: .7;
+}
+
 #modoOscuro-icono {
     font-size: 2.4rem;
     color: var(--color-blanco);
     cursor: pointer;
 }
 
+.header.barra #modoOscuro-icono {
+    color: var(--color-texto);
+    opacity: .9;
+}
+
 section {
     min-height: 100vh;
     padding: 10rem 7% 2rem;
 }
+
+
+/* ------------- Sección de Inicio ---------------- */
 
 .inicio {
     display: flex;
@@ -223,10 +253,11 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 53%;
+    width: 55%;
     pointer-events: none;
 }
 
+/* PARTE DE DISEÑO SOBRE MI */
 span {
     color: var(--color-principal);
 }
@@ -234,7 +265,8 @@ span {
 .sobreMi {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    gap: 4rem;
 }
 
 .imagen-sobreMi img {
@@ -244,4 +276,82 @@ span {
 .titulo {
     font-size: 4.5rem;
     text-align: center;
+}
+
+.sobreMi h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.contenodo-sobreMi h3 {
+    font-size: 2rem;
+}
+
+.contenodo-sobreMi p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+/* ------ PARTE DE DISEÑO SERVICIOS --------- */
+.servicios h2 {
+    margin-bottom: 5rem;
+}
+
+.servicios {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.servicios .contenido-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.contenido-servicios .logo-servicios {
+    flex: 1 1 30rem;
+    background: var(--color-bg);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem .5rem var(--color-sombra);
+    text-align: center;
+    border-top: .6rem solid var(--color-principal);
+    border-bottom: .6rem solid var(--color-principal);
+    transition: .5s ease;
+}
+
+/*Animación contenido servicios*/
+.contenido-servicios .logo-servicios:hover {
+    box-shadow: 0 .1rem 2rem var(--color-sombra);
+    transform: scale(1.02);
+}
+
+.logo-servicios i {
+    font-size: 6rem;
+    color: var(--color-principal);
+}
+
+.logo-servicios h3 {
+    font-size: 2.2rem;
+    transition: .5s ease;
+    cursor: default;
+}
+
+.logo-servicios:hover h3 {
+    color: var(--color-principal);
+}
+
+.logo-servicios p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+
+
+/* Diseño sección contacto */
+.contacto h2 {
+    margin-bottom: 3rem;
 }
