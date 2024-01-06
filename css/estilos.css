@@ -17,7 +17,7 @@
     --color-texto: #333;
     --color-principal: #F44600;
     --color-blanco: #fdfdfd;
-    --color-sombra: #0000;
+    --color-sombra: #b8b8b8;
 }
 
 html {
@@ -99,6 +99,13 @@ body {
 .header.barra #modoOscuro-icono {
     color: var(--color-texto);
     opacity: .9;
+}
+
+/* Diseño del icono de inicio */
+#icono-menu {
+    font-size: 3.6rem;
+    color: var(--color-texto);
+    display: none;
 }
 
 section {
@@ -354,4 +361,311 @@ span {
 /* Diseño sección contacto */
 .contacto h2 {
     margin-bottom: 3rem;
+}
+
+.contacto form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contacto form .cuadro-texto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacto form .cuadro-texto input,
+.contacto form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--color-texto);
+    background: var(--color-bg);
+    border-radius: .8rem;
+    margin: .7rem 0;
+    box-shadow: 0 .1rem .5rem var(--color-sombra);
+
+}
+
+.contacto form .cuadro-texto input {
+    width: 49%;
+}
+
+.contacto form textarea {
+    resize: none;
+}
+
+.contacto form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* Diseño pie de cabeza */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 7%;
+    background: var(--color-principal);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+    color: var(--color-blanco);
+}
+
+.footer-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--color-blanco);
+    border-radius: .8rem;
+    border: .2rem solid var(--color-principal);
+    outline: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.footer-icon a:hover {
+    outline-color: var(--color-blanco);
+}
+
+.footer-icon a i {
+    font-size: 2.4rem;
+    color: #333;
+}
+
+
+/* ------------------------  PUNTOS DE INTERRUPCIÓN ------------------------ */
+@media (max-width: 120px) {
+    html {
+        font-size: 55%;
+    }
+
+    .inicio .contenido-profesion {
+        height: 85.8rem;
+    }
+
+    .inicio .contenido-profesion .profesion-logo {
+        right: -12rem;
+        height: 85.8rem;
+    }
+
+    .inicio .contenido-profesion .cubrir {
+        right: -9rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .inicio .contenido-portafolio .logo-portaafolio {
+        right: -22rem;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2),
+    .navbar a:nth-child(3) {
+        color: var(--color-principal);
+    }
+
+    .navbar a.activo::before {
+        color: var(--color-principal);
+        opacity: .7;
+    }
+
+    .inicio .contenido-inicio {
+        max-width: 50rem;
+    }
+
+    .inicio .contenido-profesion .profesion-logo {
+        right: -45rem;
+    }
+
+    .inicio .contenido-profesion .cubrir {
+        right: -39.5rem;
+    }
+
+    .imagen-inicio img {
+        display: none;
+    }
+
+    .servicios,
+    .portafolio {
+        padding-bottom: 7rem;
+    }
+
+    .contacto {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+
+
+@media (max-width: 738px) {
+    #icono-menu {
+        display: block;
+    }
+
+    #modoOscuro-icono {
+        position: absolute;
+        right: 7rem;
+        font-size: 2.6rem;
+        color: var(--color-texto);
+        margin-bottom: .1rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--color-bg);
+        border-top: .1rem solid rgb(0, 0, 0, .2);
+        box-shadow: 0 .5rem rgb(0, 0, 0, .1);
+        display: none;
+    }
+
+    .navbar.activo {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--color-texto);
+    }
+
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2),
+    .navbar a:nth-child(3) {
+        color: var(--color-texto);
+    }
+
+    .navbar a.activo {
+        color: var(--color-principal);
+    }
+
+    .navbar a::before {
+        display: none;
+    }
+
+    .inicio {
+        padding: 0 3% 23rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contenido-inicio h3 {
+        font-size: 2.6rem;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 5rem;
+    }
+
+    .contenido-inicio .redesSociales-logo a {
+        margin: 2.5rem .75rem 3rem;
+    }
+
+    .inicio .contenido-profesion {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .inicio .contenido-profesion .profesion-logo {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        border-radius: 0;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    .inicio .profesion-logo .profesion {
+        padding: 0 13px;
+        left: auto;
+        transform-origin: 0;
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(1) {
+        transform: rotate(-90deg) translate (-120px, -210px);
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(1) i {
+        margin-right: 0;
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(2) {
+        transform: rotate(0deg) translate (0px, -335px);
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(3) {
+        transform: rotate(90deg) translate (-115px, -450px);
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(3) {
+        transform: rotate(90deg) translate (-115px, -450px);
+    }
+
+    .inicio .profesion-logo .profesion:nth-child(4) {
+        transform: rotate(180deg) translate (-220px, -335px);
+    }
+
+    .inicio .profesion-logo .circulo {
+        position: fixed;
+        width: 670px;
+        height: 670px;
+        z-index: -1;
+    }
+
+    .inicio .contenido-profesion .cubrir {
+        position: fixed;
+        top: 65rem;
+        left: 50%;
+        right: 0;
+        transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
+        border-width: 23.9rem;
+    }
+
+    .sobreMi {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contenodo-sobreMi h2 {
+        text-align: center;
+    }
+
+    .imagen-sobreMi img {
+        width: 70vw;
+        margin-top: -2rem;
+    }
+
+    .servicios h2,
+    .portafolio h2 {
+        margin-bottom: 3rem;
+    }
 }
