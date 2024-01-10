@@ -20,6 +20,12 @@
     --color-sombra: #b8b8b8;
 }
 
+.modo-oscuro {
+    --color-bg: #000000;
+    --color-texto: #fdfdfd;
+    --color-sombra: rgba(78, 78, 78, 0.7);
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -667,5 +673,63 @@ span {
     .servicios h2,
     .portafolio h2 {
         margin-bottom: 3rem;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
+@media (max-width: 617px) {
+    .portafolio .contenido-portafolio {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .inicio {
+        padding: 0 3% 30rem;
+    }
+
+    .contacto form .cuadro-texto input {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width: 365px) {
+    .imagen-sobreMi img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
     }
 }

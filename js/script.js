@@ -37,7 +37,7 @@ window.onscroll = () => {
         }
     });
 
-    /* Barra de navegación */
+    // Barra de navegación 
     let header = document.querySelector('.header');
 
     header.classList.toggle('barra', window.scrollY > 100);
@@ -46,6 +46,12 @@ window.onscroll = () => {
     //eliminar el icono de menú de la barra de navegación al hacer clic en el enlace de la barra de navegación (scroll)
     iconoMenu.classList.remove('bx-x');
     navbar.classList.remove('activo');
-
-
 };
+
+// MODO OSCURO
+let modoOscuroIcono= document.querySelector("#modoOscuro-icono");
+
+modoOscuroIcono.onclick = () => {
+    modoOscuroIcono.classList.toggle('bx-sun');
+    document.body.classList.toggle('modo-oscuro');
+}
