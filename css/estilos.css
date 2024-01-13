@@ -43,10 +43,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 7%;
+    padding: 0.5rem 7%;
     background: transparent;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 100;
     transition: .5s;
 
@@ -58,12 +59,17 @@ body {
 }
 
 .logo {
-    font-size: 2.5rem;
-    color: var(--color-principal);
-    font-weight: 600;
-    cursor: default;
-    margin-right: auto;
+    margin-top: 10px;
+    margin-right: 70px;
+    z-index: 99;
 }
+
+.logo img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
 
 .navbar a {
     position: relative;
@@ -472,6 +478,10 @@ span {
         padding: 2rem 3%;
     }
 
+    .logo img {
+        width: 233px;
+    }
+
     section {
         padding: 10rem 3% 2rem;
     }
@@ -483,6 +493,10 @@ span {
 
 
 @media (max-width: 991px) {
+
+    .logo img {
+        width: 182px;
+    }
 
     .navbar a:nth-child(1),
     .navbar a:nth-child(2),
@@ -527,7 +541,11 @@ span {
 
 
 
-@media (max-width: 738px) {
+@media (max-width: 847px) {
+    .logo img {
+        width: 250px;
+    }
+
     #icono-menu {
         display: block;
     }
@@ -616,36 +634,6 @@ span {
         transform-origin: 0;
     }
 
-    .inicio .profesion-logo .profesion:nth-child(1) {
-        transform: rotate(-90deg) translate (-120px, -210px);
-    }
-
-    .inicio .profesion-logo .profesion:nth-child(1) i {
-        margin-right: 0;
-    }
-
-    .inicio .profesion-logo .profesion:nth-child(2) {
-        transform: rotate(0deg) translate (0px, -335px);
-    }
-
-    .inicio .profesion-logo .profesion:nth-child(3) {
-        transform: rotate(90deg) translate (-115px, -450px);
-    }
-
-    .inicio .profesion-logo .profesion:nth-child(3) {
-        transform: rotate(90deg) translate (-115px, -450px);
-    }
-
-    .inicio .profesion-logo .profesion:nth-child(4) {
-        transform: rotate(180deg) translate (-220px, -335px);
-    }
-
-    .inicio .profesion-logo .circulo {
-        position: fixed;
-        width: 670px;
-        height: 670px;
-        z-index: -1;
-    }
 
     .inicio .contenido-profesion .cubrir {
         position: fixed;

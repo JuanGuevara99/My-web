@@ -49,9 +49,24 @@ window.onscroll = () => {
 };
 
 // MODO OSCURO
-let modoOscuroIcono= document.querySelector("#modoOscuro-icono");
+let modoOscuroIcono = document.querySelector("#modoOscuro-icono");
 
 modoOscuroIcono.onclick = () => {
     modoOscuroIcono.classList.toggle('bx-sun');
     document.body.classList.toggle('modo-oscuro');
-}
+};
+
+
+// Scroll de la página
+ScrollReveal({
+    //reset: true,
+    distace: '80px',
+    duration: '2000',
+    delay: 200
+});
+
+
+ScrollReveal().reveal('.contenido-inicio, .titulo', { origin: 'top' });
+ScrollReveal().reveal('.imagen-inicio img, .contenido-servicios, .logo-portafolio, .contacto form', { origin: 'bottom' });
+ScrollReveal().reveal('.contenido-inicio h1, .imagen-sobreMi img', { origin: 'left' });
+ScrollReveal().reveal('.contenido-inicio h3, .contenido-inicio p, .contenodo-sobreMi', { origin: 'right' });
